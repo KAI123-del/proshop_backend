@@ -1,9 +1,10 @@
 import express from 'express'
 import path from 'path'
 import multer from 'multer'
+import dotenv from 'dotenv'
 
 
-
+dotenv.config();
 const router = express.Router()
 
 const storage = multer.diskStorage({
@@ -42,7 +43,7 @@ const upload = multer({
 
 router.post('/', upload.single('image'), (req, res) => {
     console.log("request", req.file.path);
-    res.send(`http://localhost:5000/${req.file.path}`)
+    res.send(`${process.env.PORT}/${req.file.path}`)
 })
 
 
