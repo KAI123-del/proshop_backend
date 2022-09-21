@@ -112,4 +112,3 @@ app.post('/webhook', express.raw({ type: 'application/json' }), (request, respon
 
 const PORT = process.env.PORT || 5000
 
-app.listen(PORT, console.log("server running"))
