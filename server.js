@@ -9,7 +9,8 @@ import orderRoutes from './routes/orderRoutes.js'
 import uploadRoutes from './routes/uploadRoutes.js'
 import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 import path from 'path'
-import morgan from 'morgan'
+import morgan from 'morgan';
+
 
 // import { getAllUsers } from './controllers/userController.js'
 
